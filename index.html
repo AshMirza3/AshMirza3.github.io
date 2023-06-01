@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Why Choose Computer Programming?</title>
+  <style>
+    body {
+      background-color: #333;
+      color: red;
+      font-family: "Comic Sans MS", cursive;
+    }
+    
+    .container {
+      border: 2px solid blue;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Why Choose Computer Programming?</h1>
+    <img src="path_to_your_image.jpg" alt="Programmer" width="400" height="300">
+    <p>Computer programming is an exciting and rewarding career path with numerous benefits:</p>
+    <ul>
+      <li>High demand: The demand for skilled programmers continues to grow rapidly, offering excellent job prospects and security.</li>
+      <li>Lucrative salaries: Programmers often enjoy competitive salaries and various opportunities for career advancement.</li>
+      <li>Creative problem-solving: Programming allows you to solve complex problems and create innovative solutions.</li>
+      <li>Flexibility: As a programmer, you have the flexibility to work remotely, freelance, or even start your own business.</li>
+      <li>Continuous learning: The technology landscape is constantly evolving, providing ongoing opportunities to learn and stay up-to-date.</li>
+    </ul>
+    <p>Embrace the world of programming and shape the future with your skills!</p>
+    <h2>Potential Income for Programmers:</h2>
+    <pre id="salary-output"></pre>
+  </div>
+  <script>
+    interface ProgrammingSalary {
+      title: string;
+      salaryRange: string;
+    }
+    
+    const programmingSalaries: ProgrammingSalary[] = [
+      {
+        title: 'Junior Developer',
+        salaryRange: '$50,000 - $70,000 per year',
+      },
+      {
+        title: 'Mid-level Developer',
+        salaryRange: '$70,000 - $100,000 per year',
+      },
+      {
+        title: 'Senior Developer',
+        salaryRange: '$100,000 - $150,000 per year',
+      },
+      {
+        title: 'Tech Lead',
+        salaryRange: '$120,000 - $180,000 per year',
+      },
+      {
+        title: 'Software Architect',
+        salaryRange: '$150,000 - $250,000 per year',
+      },
+    ];
+    
+    const salaryOutput = document.getElementById('salary-output');
+    if (salaryOutput) {
+      programmingSalaries.forEach((salary) => {
+        salaryOutput.innerHTML += `${salary.title}: ${salary.salaryRange}\n`;
+      });
+    }
+  </script>
+</body>
+</html>
