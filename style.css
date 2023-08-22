@@ -53,3 +53,11 @@ footer {
 .contact-info {
   margin-top: 10px;
 }
+/* ... previous CSS code ... */
+
+.contact-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
