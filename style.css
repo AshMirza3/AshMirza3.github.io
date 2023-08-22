@@ -1,54 +1,55 @@
 /* style.css */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url(https://t4.ftcdn.net/jpg/05/50/95/87/240_F_550958748_OeGcRonEUNoVhd0wjd9zSEMhLFIGO9Bt.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #f5f5f5;
-  }
-  
-  header {
-    background-color: #3498db;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  nav {
-    background-color: #f39c12;
-  }
-  
-  ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-  }
-  
-  li {
-    margin: 0 1rem;
-  }
-  
-  a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  main {
-    padding: 2rem;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+}
 
 section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-  }
-  
-  section.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-    
+  display: none;
+  padding: 20px;
+}
+
+#intro {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.contact-info {
+  margin-top: 10px;
+}
