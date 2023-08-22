@@ -68,3 +68,8 @@ footer {
 .footer-bottom {
   margin-top: auto; /* Push the copyright text to the bottom */
 }
+
+.intro-text {
+  text-align: center;
+  margin: 40px 0; /* Adjust margin as needed */
+}
