@@ -7,13 +7,14 @@ navLinks.forEach((link, index) => {
     // Hide the intro text
     introText.style.display = 'none';
 
-    // Show the clicked section's content and hide other sections
-    sections.forEach((section, sectionIndex) => {
-      if (sectionIndex === index) {
-        section.classList.add('active');
-      } else {
-        section.classList.remove('active');
-      }
+    // Hide all sections and remove the 'active' class
+    sections.forEach((section) => {
+      section.style.opacity = 0; // Hide with fade effect
+      section.classList.remove('active');
     });
+
+    // Show the clicked section's content with fade-in effect
+    sections[index].style.opacity = 1;
+    sections[index].classList.add('active');
   });
 });

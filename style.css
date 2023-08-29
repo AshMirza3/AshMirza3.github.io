@@ -76,4 +76,11 @@ footer {
 section {
   color: red;
 }
+/* style.css */
+section {
+  display: none;
+  padding: 20px;
+  opacity: 0; /* Add initial opacity to create fade effect */
+  transition: opacity 0.3s ease; /* Add transition for opacity */
+}
 
