@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Schedule | League of Basketball</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .header {
+      background-color: #1678c800;
+      color: rgb(106, 102, 102);
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+    }
+
+    .line {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: 2px;
+      background-color: white;
+    }
+
+    .nav {
+      background-color: #44444400;
+    }
+
+    .nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .nav-list a {
+      text-decoration: none;
+      color: rgb(105, 96, 96);
+      font-weight: bold;
+    }
+
+    .main-content {
+      /* Add styles for your main content area */
+      padding: 20px;
+    }
+
+    .schedule-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .match-day {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .match {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 5px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Adjust other styles as needed */
+  </style>
+</head>
+<body>
+
+    <!-- Add this to the beginning of the body section in each HTML file -->
+<div id="navbar-container"></div>
+
+
+  <!-- Header Section -->
+  <header class="header">
+    <h1 class="title">League of Basketball</h1>
+    <div class="line"></div>
+  </header>
+
+  <!-- Navigation Section -->
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teaminfo.html">Team Info</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="leaderboardstats.html">Leaderboard and stats</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Section -->
+  <section class="main-content">
+    <!-- Schedule Container -->
+    <div class="schedule-container" id="schedule-container"></div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Mock teams and times
+      const teams = ["OMEGA", "23SB", "NBHD MAMBAS", "SOUTHSIDE SHOOTERS", "BOUNCE", "MAVERICKS", "HUSTLERS", "CHECKMATE"];
+      const times = ["12:00 PM", "02:30 PM", "05:00 PM", "07:30 PM"];
+
+      // Generate schedule for the next 30 days
+      const scheduleContainer = document.getElementById("schedule-container");
+      const currentDate = new Date();
+
+      for (let i = 0; i < 30; i++) {
+        const matchDate = new Date(currentDate);
+        matchDate.setDate(currentDate.getDate() + i);
+
+        const matchDayElement = document.createElement("div");
+        matchDayElement.classList.add("match-day");
+        matchDayElement.innerHTML = `<h2>${formatDate(matchDate)}</h2>`;
+
+        for (let j = 0; j < teams.length; j += 2) {
+          const matchElement = document.createElement("div");
+          matchElement.classList.add("match");
+          matchElement.innerHTML = `
+            <p>${times[j % times.length]}</p>
+            <p>${teams[j]} vs ${teams[j + 1]}</p>
+          `;
+
+          matchDayElement.appendChild(matchElement);
+        }
+
+        scheduleContainer.appendChild(matchDayElement);
+      }
+    });
+
+    function formatDate(date) {
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      return date.toLocaleDateString('en-US', options);
+    }
+
+    <!-- Add this to the end of the body section in each HTML file -->
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbarContainer = document.getElementById('navbar-container');
+    const navbarScript = document.createElement('script');
+    navbarScript.src = 'navbar.html';
+    navbarContainer.appendChild(navbarScript);
+  });
+
+  </script>
+</body>
+</html>

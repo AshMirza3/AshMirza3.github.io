@@ -1,0 +1,141 @@
+body {
+  background-color: white; /* Set background color to white */
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.header {
+  background-color: #4e4f4f65;
+  color: rgb(106, 102, 102);
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: white;
+}
+
+.title {
+  margin: 0;
+}
+
+.nav {
+  background-color: #44444400;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.main-content {
+  padding: 20px;
+  flex-grow: 1;
+  position: relative;
+  padding: 20px;
+  max-height: calc(100vh - 120px); /* Adjust the value based on your design */
+  overflow-y: auto;
+  flex: 1;
+}
+
+.centered-paragraph {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin-top: 50px; /* Adjust margin as needed */
+}
+
+.centered-paragraph p {
+  font-size: 20px; /* Adjust font size as needed */
+}
+
+.footer {
+  text-align: center;
+  color: rgb(222, 213, 213);
+  padding: 10px;
+  background-color: rgba(7, 6, 6, 0.646);
+  z-index: 1;
+}
+
+.sponsors-box {
+  position: absolute;
+  bottom: 1px;
+  right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 2px;
+  background-color: rgba(110, 116, 154, 0);
+}
+
+.sponsors-box h3 {
+  text-align: center;
+  color:rgb(0, 0, 0);
+}
+
+.sponsors-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sponsors-box li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+
+
+/* Responsive Design */
+
+@media only screen and (max-width: 768px) {
+
+  .sponsors-box {
+    position: relative; /* Change to relative positioning */
+    bottom: auto; /* Remove the bottom positioning */
+    right: auto; /* Remove the right positioning */
+    margin-top: 10px; /* Add margin-top to separate from the content */
+  }
+  
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-list a {
+    margin-bottom: 10px;
+  }
+
+  .header {
+    padding: 0.5rem;
+  }
+
+  .line {
+    height: 1px;
+  }
+
+  .centered-paragraph p {
+    font-size: 14px;
+  }
+
+  .sponsors-box {
+    font-size: 10px;
+  }
+}

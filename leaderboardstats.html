@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Leaderboard | League of Basketball</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .header {
+      background-color: #1678c800;
+      color: rgb(106, 102, 102);
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+    }
+
+    .line {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: 2px;
+      background-color: white;
+    }
+
+    .nav {
+      background-color: #44444400;
+    }
+
+    .nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .nav-list a {
+      text-decoration: none;
+      color: rgb(49, 46, 46);
+      font-weight: bold;
+    }
+
+    .main-content {
+      /* Add styles for your main content area */
+      padding: 20px;
+    }
+
+    .leaderboard-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .category-leaderboard {
+      flex: 1;
+      max-width: 300px;
+      margin: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .leaderboard-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .leaderboard-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Adjust other styles as needed */
+  </style>
+</head>
+<body>
+
+    <!-- Add this to the beginning of the body section in each HTML file -->
+<div id="navbar-container"></div>
+
+
+  <!-- Header Section -->
+  <header class="header">
+    <h1 class="title">League of Basketball</h1>
+    <div class="line"></div>
+  </header>
+
+  <!-- Navigation Section -->
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teaminfo.html">Team Info</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="leaderboardstats.html">Leaderboard and Stats</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Section -->
+  <section class="main-content">
+    <!-- Leaderboard Container -->
+    <div class="leaderboard-container" id="leaderboard-container"></div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const leaderboardContainer = document.getElementById("leaderboard-container");
+
+      // Mock data for different leaderboards
+      const categories = ["Points", "Assists", "Rebounds", "Steals"];
+      
+      categories.forEach(category => {
+        const categoryLeaderboard = document.createElement("div");
+        categoryLeaderboard.classList.add("category-leaderboard");
+        categoryLeaderboard.innerHTML = `
+          <h2>${category} Leaderboard</h2>
+          <ul class="leaderboard-list" id="${category.toLowerCase()}-leaderboard-list"></ul>
+        `;
+
+        leaderboardContainer.appendChild(categoryLeaderboard);
+
+        // Mock data (replace with real data)
+        const mockData = [
+          { name: "Player A", score: 150 },
+          { name: "Player B", score: 130 },
+          { name: "Player C", score: 120 },
+          { name: "Player D", score: 110 },
+          { name: "Player E", score: 100 },
+          { name: "Player F", score: 95 },
+          { name: "Player G", score: 90 },
+          { name: "Player H", score: 85 },
+          { name: "Player I", score: 80 },
+          { name: "Player J", score: 75 }
+        ];
+
+        const leaderboardList = document.getElementById(`${category.toLowerCase()}-leaderboard-list`);
+
+        mockData.forEach((data, index) => {
+          const leaderboardItem = document.createElement("li");
+          leaderboardItem.classList.add("leaderboard-item");
+          leaderboardItem.innerHTML = `
+            <span>${index + 1}. ${data.name}</span>
+            <span>${data.score} ${category === 'Points' ? 'points' : category}</span>
+          `;
+          leaderboardList.appendChild(leaderboardItem);
+        });
+      });
+    });
+
+    <!-- Add this to the end of the body section in each HTML file -->
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbarContainer = document.getElementById('navbar-container');
+    const navbarScript = document.createElement('script');
+    navbarScript.src = 'navbar.html';
+    navbarContainer.appendChild(navbarScript);
+  });
+
+  </script>
+</body>
+</html>

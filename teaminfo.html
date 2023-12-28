@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Sans+MS&display=swap">
+  <title>Team Info | League of Basketball</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    iframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .team-columns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Make sure the container takes the full height of the viewport */
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+      padding: 20px; /* Add padding for better visibility */
+    }
+
+    .team-column {
+      flex: 1;
+      max-width: 300px; /* Adjust the maximum width of each column */
+      background: #000000; /* Black background color */
+      color: white; /* Text color */
+      border: 1px solid #ffffff; /* White thin border */
+      border-radius: 5px; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White shadow effect */
+      margin: 10px; /* Adjust margin between columns */
+      padding: 10px; /* Add padding for better visibility */
+    }
+
+    .team-list {
+      list-style-type: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teaminfo.html">Team Info</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="leaderboardstats.html">Leaderboard and Stats</a></li>
+    </ul>
+  </nav>
+
+  <!-- Add this to the beginning of the body section in each HTML file -->
+<div id="navbar-container"></div>
+
+
+  <!-- Background YouTube Video -->
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/mJj8SunITt0?si=3rSt_zHj-uRA8DFQ"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+
+  <!-- Main Content Section -->
+  <section class="main-content">
+    <!-- Two Vertical Lists Side by Side -->
+    <div class="team-columns">
+      <!-- D-MAX Conference -->
+      <div class="team-column">
+        <h3>D-MAX Conference</h3>
+        <ul class="team-list">
+          <li>OMEGA</li>
+          <li>23RD STREET BALLERZ</li>
+          <li>NBHD MAMBAS</li>
+          <li>SOUTHSIDE SHOOTERS</li>
+          <li>BOUNCE</li>
+          <li>MAVERICKS</li>
+          <li>HUSTLERS</li>
+          <li>CHECKMATE</li>
+        </ul>
+      </div>
+
+      <!-- HINUCON Conference -->
+      <div class="team-column">
+        <h3>HINUCON Conference</h3>
+        <ul class="team-list">
+          <li>WESTCOAST RAIDERS</li>
+          <li>RONNINS</li>
+          <li>PANDAS</li>
+          <li>T6</li>
+          <li>OG BANDITS</li>
+          <li>BAHRIA BALLERS</li>
+          <li>SABERS</li>
+          <li>MALIR TROJANS</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add this to the end of the body section in each HTML file -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbarContainer = document.getElementById('navbar-container');
+    const navbarScript = document.createElement('script');
+    navbarScript.src = 'navbar.html';
+    navbarContainer.appendChild(navbarScript);
+  });
+</script>
+
+
+  <script src="app.js"></script>
+</body>
+</html>

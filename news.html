@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Sans+MS&display=swap">
+  <title>News | League of Basketball</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: url('https://ak.picdn.net/shutterstock/videos/29395606/thumb/1.jpg?ip=x480');
+      background-size: cover;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px;
+      background-color: #ffffff; /* Button background color */
+      color: #000000; /* Button text color */
+      border: none;
+      cursor: pointer;
+    }
+
+    .news-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; /* Updated to space around */
+      align-items: center;
+      height: 100vh;
+      padding: 20px; /* Add padding for better visibility */
+      overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+    .news-bubble {
+      flex: 1;
+      width: calc(33.33% - 40px); /* Updated to ensure equal width */
+      margin: 20px;
+      padding: 20px;
+      background: #000000; /* Black background color */
+      color: white; /* Text color */
+      border: 1px solid #ffffff; /* White thin border */
+      border-radius: 15px; /* Rounded corners */
+      text-align: center;
+    }
+
+    /* styles.css */
+
+/* Your existing styles here */
+/* ... */
+
+/* Styles for the interactive news carousel */
+.carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.carousel-inner {
+  display: inline-block;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+.scroll-left,
+.scroll-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+.scroll-left { left: 10px; }
+.scroll-right { right: 10px; }
+
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teaminfo.html">Team Info</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="leaderboardstats.html">Leaderboard and Stats</a></li>
+    </ul>
+  </nav>
+
+  <!-- Add this to the beginning of the body section in each HTML file -->
+<div id="navbar-container"></div>
+
+  <!-- Main Content Section -->
+  <section class="main-content">
+    <!-- News Container -->
+    <div class="news-container">
+      <!-- News Bubbles -->
+      <div class="news-bubble">
+        <h2>SEASON 4 RECAP</h2>
+        <p>The League of Basketball (LOB) Championship concluded with a thrilling finale. Team OMEGA emerged as the champions, securing their victory with remarkable teamwork and skillful plays.</p>
+        <p>Stay tuned for exclusive interviews with the winning team and highlights from the championship games.</p>
+      </div>
+
+      <div class="news-bubble">
+        <h2>POTW HINUCON CONF</h2>
+        <p>The Player of the Week #2 from the Hinucon Conference is none other than #1 from the Ronins, Maaz Zubairi! Maaz a.k.a the Producer did a little bit of everything for his team in a thriller of a game vs. the Pandas</p>
+      </div>
+
+      <!-- Add more news bubbles as needed -->
+      <div class="news-bubble">
+        <h2>POTW D-MAX CONF</h2>
+        <p>The DMAX Conference Player of the Week #2 is Omega’s Ans Azhar!</p>
+      </div>
+
+      <div class="news-bubble">
+        <h2>LOB ACADEMY</h2>
+        <p>League of Basketball would like to turn you into the best player you can be and we feel like you can reach that goal with LOB Academy.Tuesdays, Thursdays, Fridays 5 to 630pm(Summer Camp).
+             Be part of the LOB family!</p>
+      </div>
+
+      <div class="news-bubble">
+        <h2>TRANSFER NEWS(S5)</h2>
+        <ul>
+            <li>Team Veterans Departs</li>
+            <li>Zain Ali from 23SB to SouthSide Shooters</li>
+            <li>Naqash from Omega to SouthSide Shooters</li>
+            <li>Ali Chanzeb from Veterans to OMEGA</li>
+            <li>Raaif from Bounce to OMEGA</li>
+            <li>Shaaf Khan for Zain Ali in 23SB</li>
+            <li>Zubair Qureshi to 23SB(tbc)</li>
+            <li>Talal Ahmad from SSS to Bounce</li>
+            <li>Dani Ahmed from Veterans to Bounce</li>
+            <li>Abdullah Imam from Veterans to Bounce</li>
+        </ul>
+      </div>
+
+      <div class="news-bubble">
+        <h2>Upcoming All-Star Game</h2>
+        <p>Mark your calendars for the upcoming All-Star Game! Witness the best players showcase their skills in an unforgettable basketball spectacle.</p>
+      </div>
+
+      <!-- Central Text -->
+      <div class="news-bubble">
+        <h2>Stay up to date with all LOB news</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add this to the end of the body section in each HTML file -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbarContainer = document.getElementById('navbar-container');
+    const navbarScript = document.createElement('script');
+    navbarScript.src = 'navbar.html';
+    navbarContainer.appendChild(navbarScript);
+  });
+</script>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
