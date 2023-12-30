@@ -102,11 +102,16 @@ body {
   margin-bottom: 5px;
 }
 
+.logo-container {
+  text-align: left;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
 .logo-image {
   max-width: 100px; /* Adjust the max-width as needed */
   height: auto;
-  margin-right: 10px; /* Adjust the margin as needed */
 }
+
 
 
 
