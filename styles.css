@@ -102,6 +102,13 @@ body {
   margin-bottom: 5px;
 }
 
+.logo-image {
+  max-width: 100px; /* Adjust the max-width as needed */
+  height: auto;
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+
 
 
 /* Responsive Design */
