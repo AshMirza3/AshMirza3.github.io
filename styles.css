@@ -112,6 +112,15 @@ body {
   height: auto;
 }
 
+.spinningbbal {
+  text-align: right;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.spinning-basketball {
+  max-width: 100px; /* Adjust the max-width as needed */
+  height: auto;
+}
 
 
 
