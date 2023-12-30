@@ -102,25 +102,21 @@ body {
   margin-bottom: 5px;
 }
 
-.logo-container {
-  text-align: left;
-  margin-bottom: 20px; /* Adjust margin as needed */
-}
-
 .logo-image {
   max-width: 100px; /* Adjust the max-width as needed */
   height: auto;
+  margin-right: 10px; /* Adjust the margin as needed */
 }
 
-.spinningbbal {
-  text-align: right;
-  margin-bottom: 20px; /* Adjust margin as needed */
+.lottie-animation {
+  text-align: center; /* Center the Lottie animation */
+  margin-top: 20px; /* Add margin as needed */
+  float: right; /* Float the animation to the right */
+  margin-right: 20px; /* Adjust margin-right as needed */
 }
 
-.spinning-basketball {
-  max-width: 100px; /* Adjust the max-width as needed */
-  height: auto;
-}
+
+
 
 
 
@@ -159,4 +155,12 @@ body {
   .sponsors-box {
     font-size: 10px;
   }
+@media only screen and (max-width: 768px) {
+  .lottie-animation {
+    float: none; /* Reset float for mobile view */
+    margin-right: 0; /* Reset margin-right for mobile view */
+    text-align: center; /* Center the animation in mobile view */
+  }
+  
 }
+
