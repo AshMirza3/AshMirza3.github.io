@@ -155,13 +155,15 @@ body {
   .sponsors-box {
     font-size: 10px;
   }
-@media only screen and (max-width: 768px) {
   .lottie-animation {
     float: none; /* Reset float for mobile view */
     margin-right: 0; /* Reset margin-right for mobile view */
     text-align: center; /* Center the animation in mobile view */
   }
-  
+  .logo-image {
+    display: block;
+    margin: 0 auto; /* Center the logo horizontally */
+    max-width: 80%; /* Adjust the max-width as needed */
+  }
 }
 
-}
